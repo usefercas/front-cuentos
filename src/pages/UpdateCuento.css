@@ -1,0 +1,55 @@
+/* Estilo para el contenedor del formulario de actualización */
+.update-cuento-container {
+    padding: 20px;
+    background-color: #f5f5dc; /* Beige claro para el fondo */
+    border-radius: 8px; /* Bordes redondeados para el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para el contenedor */
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Centrar el contenedor y dar espacio alrededor */
+  }
+  
+  /* Estilo del formulario de actualización */
+  .update-cuento-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .update-cuento-form div {
+    margin-bottom: 15px; /* Espacio entre campos */
+  }
+  
+  .update-cuento-form label {
+    display: block;
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+    color: #8B4513; /* Marrón para las etiquetas */
+  }
+  
+  .update-cuento-form input,
+  .update-cuento-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8B4513; /* Borde marrón claro para los campos */
+    border-radius: 5px; /* Bordes redondeados para los campos */
+    font-size: 1rem;
+  }
+  
+  .update-cuento-form textarea {
+    height: 150px; /* Altura para el área de texto */
+  }
+  
+  .btn-save {
+    padding: 10px 20px;
+    background-color: #8B4513; /* Marrón claro para el botón */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  .btn-save:hover {
+    background-color: #6F4F28; /* Un marrón más oscuro al pasar el ratón */
+  }
+  

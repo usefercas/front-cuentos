@@ -1,0 +1,117 @@
+/* Estilo para el contenedor del detalle del cuento */
+.cuento-details-container {
+    padding: 20px;
+    background-color: #f5f5dc; /* Beige claro para el fondo */
+    border-radius: 8px; /* Bordes redondeados para el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para el contenedor */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Centrar el contenedor y dar espacio alrededor */
+    min-height: calc(100vh - 60px); /* Altura mínima para que ocupe el resto de la pantalla menos la altura del navbar */
+    position: relative; /* Necesario para posicionar los botones */
+    display: flex; /* Usar flexbox para alinear el contenido */
+    flex-direction: column; /* Alinear contenido en columna */
+}
+
+/* Estilo para el título del cuento */
+.cuento-details-title {
+    color: #8B4513; /* Marrón para el título */
+    font-size: 2rem; /* Tamaño grande para el título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-align: center; /* Centrar el título */
+}
+
+/* Estilo de la imagen del cuento */
+.cuento-details-img {
+    width: 100%; /* Imagen a tamaño completo del contenedor */
+    max-width: 400px; /* Ancho máximo para la imagen ajustado a un tamaño más pequeño */
+    height: auto; /* Mantener la relación de aspecto */
+    display: block; /* Asegurar que la imagen se muestre como bloque */
+    margin: 0 auto 20px; /* Centrar la imagen y dar espacio debajo */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+/* Estilo del contenido del cuento */
+.cuento-details-content {
+    font-size: 1rem; /* Tamaño de fuente para el contenido */
+    color: #8B4513; /* Marrón para el contenido */
+    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+}
+
+/* Estilo para el botón de lectura */
+.cuento-details-read-button {
+    padding: 10px 20px;
+    background-color: #8B4513; /* Marrón claro para el botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 20px auto; /* Espacio y centrado del botón */
+    display: block; /* Asegurar que el botón se muestre como bloque */
+}
+
+.cuento-details-read-button:hover {
+    background-color: #6F4F28; /* Un marrón más oscuro al pasar el ratón */
+}
+
+/* Estilo para los botones */
+.cuento-details-buttons {
+    display: flex; /* Usar flexbox para alinear los botones */
+    flex-direction: column; /* Alinear los botones en columna */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: auto; /* Empujar los botones hacia el final del contenedor */
+    align-items: center; /* Centrar los botones horizontalmente */
+}
+
+.cuento-details-back-button,
+.cuento-details-delete-button,
+.cuento-details-update-button {
+    padding: 10px 20px;
+    border: 1px solid #8B4513; /* Borde marrón para los botones */
+    border-radius: 5px; /* Bordes redondeados para los botones */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    text-align: center; /* Centrar el texto dentro de los botones */
+    font-size: 1rem; /* Tamaño de fuente para los botones */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre los botones */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves para el hover */
+}
+
+.cuento-details-back-button {
+    background-color: #f5f5dc; /* Beige claro para el fondo del botón */
+    color: #8B4513; /* Marrón para el texto del botón */
+}
+
+.cuento-details-back-button:hover {
+    background-color: #8B4513; /* Fondo marrón claro al pasar el ratón */
+    color: #fff; /* Texto blanco al pasar el ratón */
+}
+
+.cuento-details-delete-button {
+    background-color: #8B4513; /* Marrón claro para el fondo del botón */
+    color: white; /* Texto blanco */
+}
+
+.cuento-details-delete-button:hover {
+    background-color: #6F4F28; /* Un marrón más oscuro al pasar el ratón */
+}
+
+/* Estilo para el botón de actualizar */
+.cuento-details-update-button {
+    padding: 10px 20px;
+    border: 1px solid #8B4513; /* Borde marrón para el botón */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    background-color: #8B4513; /* Marrón claro para el fondo del botón */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    text-align: center; /* Centrar el texto dentro del botón */
+    font-size: 1rem; /* Tamaño de fuente para el botón */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves para el hover */
+}
+
+.cuento-details-update-button:hover {
+    background-color: #6F4F28; /* Un marrón más oscuro al pasar el ratón */
+    color: #fff; /* Texto blanco al pasar el ratón */
+}

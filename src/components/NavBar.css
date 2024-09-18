@@ -1,0 +1,46 @@
+/* src/components/NavBar.css */
+.custom-navbar {
+    position: fixed; /* Fija el navbar en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el navbar ocupe el ancho completo */
+    margin: 0;
+    padding: 0;
+    background-color: #8B4513; /* Color marrón */
+    z-index: 1000; /* Asegura que el navbar esté encima de otros elementos */
+}
+
+/* Opcional: Ajustar el padding o el margen en dispositivos móviles */
+.custom-navbar .navbar-nav {
+    flex-direction: row;
+}
+
+.custom-navbar .nav-link {
+    margin-right: 1rem; /* Espaciado entre los enlaces */
+}
+
+/* Ajusta el tamaño del logo según tus necesidades */
+.custom-navbar .navbar-brand img {
+    height: 50px;
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 767px) {
+    .custom-navbar .navbar-nav {
+        flex-direction: column; /* Muestra los enlaces en columna en pantallas pequeñas */
+        margin-top: 0; /* Elimina el margen superior en el menú colapsado */
+    }
+
+    .custom-navbar .nav-link {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+        margin-bottom: 0.5rem; /* Espacio debajo de cada enlace en pantallas pequeñas */
+    }
+
+    .navbar-toggler {
+        border: none; /* Elimina el borde del botón de menú */
+    }
+
+    .navbar-toggler-icon {
+        background-image: none; /* Elimina el icono predeterminado del botón de menú */
+    }
+}

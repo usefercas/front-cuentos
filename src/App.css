@@ -1,0 +1,17 @@
+/* src/App.css */
+body {
+  margin: 0;
+  padding: 0; /* Asegúrate de que no haya padding en el body */
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido fluya debajo del navbar */
+  min-height: 100vh;
+  background-image: url('/foto2.png'); /* Ruta a la imagen en la carpeta public */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  margin-top: 60px; /* Ajusta este valor según la altura del navbar */
+  flex: 1;
+}
