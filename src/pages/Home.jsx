@@ -8,7 +8,7 @@ const Home = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/cuentos/obtener') // Ajusta la URL según tu API
+    axios.get('https://api-cuento.onrender.com/api/cuentos/obtener') // Reemplaza con la URL de tu API
       .then(response => {
         setCuentos(response.data);
       })

@@ -11,7 +11,7 @@ const UpdateCuento = () => {
   const navigate = useNavigate(); // Hook para redirigir
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/cuentos/obtener/${id}`)
+    axios.get(`https://api-cuento.onrender.com/api/cuentos/obtener/${id}`)
       .then(response => {
         setCuento(response.data);
         setEditData(response.data); // Pre-cargar datos en el formulario
@@ -28,7 +28,7 @@ const UpdateCuento = () => {
   };
 
   const handleSaveChanges = () => {
-    axios.put(`http://localhost:3000/api/cuentos/actualizar/${id}`, editData)
+    axios.put(`https://api-cuento.onrender.com/api/cuentos/actualizar/${id}`, editData)
       .then(() => {
         navigate(`/cuento/${id}`); // Redirigir a la página de detalles después de la actualización
       })

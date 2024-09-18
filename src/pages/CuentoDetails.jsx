@@ -12,7 +12,7 @@ const CuentoDetails = () => {
   const navigate = useNavigate(); // Hook para redirigir
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/cuentos/obtener/${id}`)
+    axios.get(`https://api-cuento.onrender.com/api/cuentos/obtener/${id}`)
       .then(response => {
         setCuento(response.data);
       })
@@ -31,7 +31,7 @@ const CuentoDetails = () => {
   }, [isReading, utterance]);
 
   const handleDelete = () => {
-    axios.delete(`http://localhost:3000/api/cuentos/eliminar/${id}`)
+    axios.delete(`https://api-cuento.onrender.com/api/cuentos/eliminar/${id}`)
       .then(() => {
         navigate('/'); // Redirigir a la página principal después de eliminar
       })

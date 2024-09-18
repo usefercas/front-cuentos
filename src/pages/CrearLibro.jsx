@@ -15,7 +15,7 @@ const CrearLibro = () => {
     e.preventDefault();
     const formData = { title, contenido, image };
 
-    axios.post('http://localhost:3000/api/cuentos/crear', formData)
+    axios.post('https://api-cuento.onrender.com/api/cuentos/crear', formData)
       .then(() => {
         setStatus('Libro creado exitosamente.');
         setTitle('');
@@ -72,4 +72,3 @@ const CrearLibro = () => {
 };
 
 export default CrearLibro;
-
