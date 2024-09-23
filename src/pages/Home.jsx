@@ -1,34 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CuentoCard from '../components/CuentoCard'; // Ajusta la importación según el componente real
-import './Home.css'; // Asegúrate de importar el CSS actualizado
+import CuentoCard from '../components/CuentoCard';
+import './Home.css';
 
 const Home = () => {
-  const [cuentos, setCuentos] = useState([]);
-  const [error, setError] = useState(null);
+    const [cuentos, setCuentos] = useState([]);
+    const [error, setError] = useState(null);
 
-  useEffect(() => {
-    axios.get('https://api-cuento.onrender.com/api/cuentos/obtener') // Reemplaza con la URL de tu API
-      .then(response => {
-        setCuentos(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching cuentos:', error);
-        setError('Error al cargar los cuentos.');
-      });
-  }, []);
+    useEffect(() => {
+        axios.get('https://elmundodelucas.netlify.app/api/cuentos/obtener')
+            .then(response => {
+                setCuentos(response.data);
+            })
+            .catch(error => {
+                console.error('Error al cargar los cuentos:', error);
+                setError('Error al cargar los cuentos.');
+            });
+    }, []);
 
-  return (
-    <div className="home-container">
-      <h1 className="cuentos-heading">Lista de Cuentos</h1>
-      {error && <p>{error}</p>}
-      <div className="cuentos-grid">
-        {cuentos.map(cuento => (
-          <CuentoCard key={cuento._id} cuento={cuento} />
-        ))}
-      </div>
-    </div>
-  );
+    return (
+        <div className="home-container">
+            <h1 className="cuentos-heading">Lista de Cuentos</h1>
+            {error && <p>{error}</p>}
+            <div className="cuentos-grid">
+                {cuentos.map(cuento => (
+                    <CuentoCard key={cuento._id} cuento={cuento} />
+                ))}
+            </div>
+        </div>
+    );
 };
 
 export default Home;
