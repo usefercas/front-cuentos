@@ -8,7 +8,8 @@ const Home = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get('https://elmundodelucas.netlify.app/api/cuentos/obtener')
+        // Cambié la URL a la del backend local (localhost:3000)
+        axios.get('http://localhost:3000/api/cuentos/obtener')
             .then(response => {
                 setCuentos(response.data);
             })

@@ -11,7 +11,7 @@ const UpdateCuento = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`https://elmundodelucas.netlify.app/api/cuentos/obtener/${id}`)
+        axios.get(`http://localhost:3000/api/cuentos/obtener/${id}`)
             .then(response => {
                 setCuento(response.data);
                 setEditData(response.data);
@@ -28,8 +28,13 @@ const UpdateCuento = () => {
     };
 
     const handleSaveChanges = () => {
-        axios.put(`https://elmundodelucas.netlify.app/api/cuentos/actualizar/${id}`, editData)
+        console.log("Enviando datos al backend:", editData); // Depuración
+
+        axios.put(`http://localhost:3000/api/cuentos/actualizar/${id}`, editData, {
+            headers: { 'Content-Type': 'application/json' }
+        })
             .then(() => {
+                console.log("Cuento actualizado con éxito.");
                 navigate(`/cuento/${id}`);
             })
             .catch(error => {
